@@ -51,8 +51,9 @@ npm install
         * Create a user.
         * Update the `db` property in file `config/env/development.js` to reflect your DB setup. (in format: `mongodb://<username>:<password>@<databasename>`)
     * OR B.Using local MongoDB 
+	* Install a local instance of [MongdDB](https://docs.mongodb.org/getting-started/shell/installation/) (if you haven't already).
         * If using local Mongo DB instance, start [mongod](http://docs.mongodb.org/manual/reference/program/mongod/#bin.mongod). 
-        * Update the `db` property in file `config/env/development.js` to reflect your DB setup. (in format: `mongodb://localhost:27017/<databasename>`)
+        * Update the `db` property in file `config/env/development.js` to reflect your DB setup. (in format: `mongodb://localhost:27017/<databasename>`) If <databasename> does not exist it will be created the first time you use it.
 
 * Populate MongoDB with seed data required for the app
     * Run grunt task below to populate the DB with seed data required for the application. Pass the desired environment as argument. If not passed, "development" is the default:
